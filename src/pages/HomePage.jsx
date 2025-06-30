@@ -14,14 +14,13 @@ export default function HomePage() {
       setLoading(true);
       setError('');
       try {
-        const res = await axios.get('https://newsapi.org/v2/top-headlines', {
-          params: {
-            country: 'us',
-            category,
-            apiKey: import.meta.env.VITE_NEWSAPI_KEY,
-          },
-        });
-        console.log('Fetched articles:', res.data.articles); // ✅ debug
+        const res = await axios.get("https://storm-seasoned-clavicle.glitch.me/api/news", {
+          params:
+            { category },
+        }
+        );
+        
+ 
         setArticles(res.data.articles || []);
       } catch (err) {
         console.error('NewsAPI error:', err.message);
