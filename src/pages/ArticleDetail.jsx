@@ -12,7 +12,7 @@ export default function ArticleDetail() {
     setLoading(true);
     setError('');
     try {
-      const res = await axios.post("http://storm-seasoned-clavicle.glitch.me/api/summarize-article", {
+      const res = await axios.post("http://localhost:5000/api/summarize-article", {
         text: article.content || article.description || article.title,
       });
       setSummary(res.data.summary);

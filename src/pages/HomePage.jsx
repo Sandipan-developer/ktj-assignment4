@@ -14,7 +14,7 @@ export default function HomePage() {
       setLoading(true);
       setError('');
       try {
-        const res = await axios.get("https://storm-seasoned-clavicle.glitch.me/api/news", {
+        const res = await axios.get("http://localhost:5000/api/news", {
           params:
             { category },
         }
